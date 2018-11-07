@@ -1,6 +1,8 @@
+<div class="content">
 <h2><%= @restaurant.name %></h2>
 
-<%= link_to "Create", new_restaurant_path %>
+
+
 <ul>
   <li>Address: <%= @restaurant.address %></li>
   <!-- <li>Phone: <%= @restaurant.phone_number %></li> -->
@@ -17,5 +19,14 @@
   <% end %>
 </ul>
 
+<div class="row">
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, :collection => (0..5).to_a %>
+    <%= f.submit "add a review", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
 <%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
 <%= link_to "Home", restaurants_path %>
+</div>
