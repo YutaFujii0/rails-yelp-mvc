@@ -8,7 +8,7 @@ puts 'Creating database'
   attributes = {
     name: Faker::Beer.name,
     address: Faker::WorldCup.stadium,
-    phone_munber: Faker::PhoneNumber.phone_number.delete('.'),
+    phone_number: Faker::PhoneNumber.phone_number,
     category: Restaurant::CATEGORY.sample
   }
   Restaurant.create!(attributes)
