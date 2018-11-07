@@ -64,6 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Install for le-wagon challenge
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'jquery-rails'
 gem 'rails-controller-testing', group: [ :test ]
